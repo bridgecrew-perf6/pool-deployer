@@ -1,0 +1,5 @@
+type PoolDeployerEntity @entity {
+  id: ID!
+  poolCount: BigInt!
+  allPools: [Bytes!] # address[]
+}

@@ -1,0 +1,23 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: PoolDeployer
+    network: rinkeby
+    source:
+      address: "0x8e6F14eD597e23aaD7B62454Abf9B5CfC8D15699"
+      abi: PoolDeployer
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - PoolDeployerEntity
+      abis:
+        - name: PoolDeployer
+          file: ./abis/PoolDeployer.json
+      callHandlers:
+        - function: deployPool(address)
+          handler: handleDeployPool
+      file: ./src/mapping.ts
