@@ -1,5 +1,10 @@
 type PoolDeployerEntity @entity {
   id: ID!
   poolCount: BigInt!
-  allPools: [Bytes!] # address[]
+  allPools: [Bytes!]
+}
+
+type NftPoolEntity @entity {
+  id: ID!
+  operator: Bytes!
 }

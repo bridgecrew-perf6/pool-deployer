@@ -18,6 +18,9 @@ dataSources:
       abis:
         - name: PoolDeployer
           file: ./abis/PoolDeployer.json
+      eventHandlers:
+        - event: DeployNewNftPool(indexed address)
+          handler: handleDeployNewNftPool
       callHandlers:
         - function: deployPool(address)
           handler: handleDeployPool
