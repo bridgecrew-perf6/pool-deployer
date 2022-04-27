@@ -6,7 +6,7 @@ dataSources:
     name: PoolDeployer
     network: rinkeby
     source:
-      address: "0x8e6F14eD597e23aaD7B62454Abf9B5CfC8D15699"
+      address: "0x85d37EC4F245F629acb602796434aFE8d0DfF003"
       abi: PoolDeployer
       startBlock: 10565715
     mapping:
@@ -21,7 +21,4 @@ dataSources:
       eventHandlers:
         - event: DeployNewNftPool(indexed address)
           handler: handleDeployNewNftPool
-      callHandlers:
-        - function: deployPool(address)
-          handler: handleDeployPool
       file: ./src/mapping.ts
